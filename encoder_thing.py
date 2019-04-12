@@ -13,7 +13,8 @@ def encode():
 		codes = json.load(j)
 
 	form = request.form.to_dict()
-	user = form.get('user')
+	print(form)
+	sys.stdout.flush()
 	text = form.get('text')
 
 	print(text)
@@ -35,6 +36,8 @@ def decode():
 		names = t.read()
 
 	form = request.form.to_dict()
+	print(form)
+	sys.stdout.flush()
 	user = form.get('user')
 	text = codes.get(form.get('text'))
 
