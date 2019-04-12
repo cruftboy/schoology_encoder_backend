@@ -1,1 +1,1 @@
-web: gunicorn encoder_thing:app
+web: gunicorn encoder_thing:app --preload
