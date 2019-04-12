@@ -1,6 +1,7 @@
 from flask import Flask, request, Response
 import json
 import os
+import sys
 
 app = Flask(__name__)
 
@@ -22,7 +23,7 @@ def encode():
 	codes['=['+str(len(codes))+']='] = text
 
 	with open('codes.json','w') as j:
-		json.dump(codes,j)
+		json.dump(codes,j) 
 
 	resp = Response('=['+str(len(codes)-1)+']=')
 	resp.headers['Access-Control-Allow-Origin'] = '*'
