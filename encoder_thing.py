@@ -23,7 +23,9 @@ def encode():
 	codes['=['+str(len(codes))+']='] = text
 
 	with open('codes.json','w') as j:
-		json.dump(codes,j) 
+		print(codes)
+		sys.stdout.flush()
+		json.dump(codes,j)
 
 	resp = Response('=['+str(len(codes)-1)+']=')
 	resp.headers['Access-Control-Allow-Origin'] = '*'
